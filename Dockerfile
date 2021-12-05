@@ -19,7 +19,7 @@ WORKDIR /tmp/
 RUN mkdir $toolchain && sudo apt-get update
 
 RUN sudo apt-get install -y cmake autoconf libtool libtool-bin vim \
-    libfontconfig1 libxrender1 libxrender1 libxtst6 libxi6 lcov python3-distutils
+    libfontconfig1 libxrender1 libxrender1 libxtst6 libxi6 lcov python3-distutils pkg-config
 
 RUN $ANDROID_NDK_HOME/build/tools/make-standalone-toolchain.sh \
     --arch=arm \
